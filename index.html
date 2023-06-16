@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./scss/_hamburger.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body id="home">
+    <header class="heading">
+        <div class="heading-container">
+            <div class="heading-container-section">
+                <div class="heading-container-section-logo">
+                    <img src="./assets/icons/Logo.svg">
+                </div>
+                <div class="heading-container-section-nav">
+                    <div class="hamburger hamburger--collapse">
+                        <div class="hamburger-box">
+                          <div class="hamburger-inner"></div>
+                        </div>
+                      </div>
+                    <ul class="heading-container-section-nav-list">
+                        <li class="heading-container-section-nav-list-item"><a href="#home">Home</a></li>
+                        <li class="heading-container-section-nav-list-item"><a href="#about">About</a></li>
+                        <li class="heading-container-section-nav-list-item"><a href="#services">Services</a></li>
+                        <li class="heading-container-section-nav-list-item"><a href="#offers">Offers</a></li>
+                        <li class="heading-container-section-nav-list-item"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="heading-container-section-login">
+                    <h1 class="heading-container-section-login-regist"><a href="#">Register</a></h1>
+                    <button id="showRegistButton" class="heading-container-section-login-sign">Sign In</button>
+                </div>
+            </div>
+            <div class="heading-container-descript">
+
+                <div id="close" class="regist">
+                    <div class="regist-bg">
+                        <button onclick='close()' id="closeButton" class='regist-bg-icon'><img src="./assets/icons/xmark-solid.svg"></button>
+                        <div class="regist-bg-block">
+                            <div class="regist-bg-block-form">
+                                <h1 class="regist-bg-block-form-title">Register</h1>
+                                <form class="regist-bg-block-form-item">
+                                    <input class="regist-bg-block-form-item-name" type="text" placeholder="Your Full Name" required>
+                                    <input class="regist-bg-block-form-item-name" type="email" placeholder="Your Email Address" required>
+                                    <input  class="regist-bg-block-form-item-name" type="password" pattern="^(?=.*[A-Z]).{8,}$" placeholder="Enter your password" required>
+                                    <input type="submit" class="regist-bg-block-form-item-send" value="Send"></input>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="heading-container-descript-title">We are what we do <br> not what we say <br> we'll do.</h1>
+                <p class="heading-container-descript-text">Risus viverra at in lectus arcu id. Potenti diam, justo
+                    lectus <br> mattis. A, sit duis quis turpis
+                    pellentesque. Purus amet, risus <br> nisl morbi mi id. </p>
+                <div class="heading-container-descript-click">
+                    <button class="heading-container-descript-click-get">Get a Quote</button>
+                    <button class="heading-container-descript-click-regist">Register</button>
+                </div>
+
+            </div>
+        </div>
+   
+    </header>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <h1 class="about-container-title">About</h1>
+            <div class="about-container-descript">
+                <p>Tempor, egestas tristique mi eu vitae maecenas. Iaculis vestibulum, amet, eleifend natoque velit
+                    praesent. Amet sed vivamus morbi euismod felis venenatis maecenas.</p>
+                <button class="about-container-descript-button" id="learnMoreButton"><a class="button-more">Learn more</a></button>
+                <div class="additional-info">
+                    <p>Additional information goes here.Tempor, egestas tristique mi eu vitae maecenas. Iaculis vestibulum, amet, eleifend natoque velit praesent. Amet sed vivamus morbi euismod felis venenatis maecenas.</p>
+                  </div>            
+            </div>
+        </div>
+    </section>
+    <section id="services" class="services">
+        <h1 class="services-title">Services</h1>
+        <p class="services-text">our services will enrich your lifestyle</p>
+        <div class="services-slider">
+            <div class="services-slider-item">
+                <img class="services-slider-item-img" src="./assets/images/travel.svg" alt="travel">
+                <p class="services-slider-item-text">Travel</p>
+            </div>
+            <div class="services-slider-item">
+                <img src="./assets/images/home.jpg" alt="home">
+                <p class="services-slider-item-text">Home</p>
+            </div>
+            <div class="services-slider-item">
+                <img src="./assets/images/roadside.svg" alt="roadside">
+                <p class="services-slider-item-text">Roadside</p>
+            </div>
+            <div class="services-slider-item">
+                <img src="./assets/images/banking.svg" alt="banking">
+                <p class="services-slider-item-text">Banking</p>
+            </div>
+            <div class="services-slider-item">
+                <img src="./assets/images/insurance.svg" alt="insurance">
+                <p class="services-slider-item-text">Insurance</p>
+            </div>
+        </div>
+    </section>
+    <section id="offers" class="offers">
+        <h1 class="offers-title">Extraordinary Offers</h1>
+        <p class="offers-text">offers that you can’t ignore</p>
+        <div class="offers-section">
+            <div class="offers-section-slider">
+                <div class="offers-section-slider-item">
+                    <img src="./assets/images/land.svg" alt="land">
+                </div>
+                <div class="offers-section-slider-item">
+                    <img src="./assets/images/land.svg" alt="land">
+                </div>
+                <div class="offers-section-slider-item">
+                    <img src="./assets/images/land.svg" alt="land">
+                </div>
+                <div class="offers-section-slider-item">
+                    <img src="./assets/images/land.svg" alt="land">
+                </div>
+                <div class="offers-section-slider-item">
+                    <img src="./assets/images/land.svg" alt="land">
+                </div>
+            </div>
+            <div class="offers-section-inform">
+                <h1 class="offers-section-inform-title">Theme Park</h1>
+                <p class="offers-section-inform-descrip">Penatibus risus quam risus, venenatis vitae mauris. Libero
+                    lorem urna quisque nulla scelerisque viverra lorem eu.</p>
+                <div class="offers-section-inform-items">
+                    <div class="offers-section-inform-items-block">
+                        <img src="./assets/images/image1.svg" alt="universal studio">
+                        <h1 class="offers-section-inform-items-block-title">Universal Studio</h1>
+                        <p class="offers-section-inform-items-block-location">California,USA</p>
+                    </div>
+                    <div class="offers-section-inform-items-block">
+                        <img src="./assets/images/image2.svg" alt="universal studio">
+                        <h1 class="offers-section-inform-items-block-title">Manashtra</h1>
+                        <p class="offers-section-inform-items-block-location">Uath,USA</p>
+                    </div>
+                    <div class="offers-section-inform-items-block4">
+                        <img src="./assets/images/image3.svg" alt="universal studio">
+                        <h1 class="offers-section-inform-items-block4-title">Universal Studio</h1>
+                        <p class="offers-section-inform-items-block4-location">New York,USA</p>
+                    </div>
+                    <div class="offers-section-inform-items-block4">
+                        <img src="./assets/images/image4.svg" alt="universal studio">
+                        <h1 class="offers-section-inform-items-block4-title">Universal Studio</h1>
+                        <p class="offers-section-inform-items-block4-location">Pasific Park, San Diago</p>
+                    </div>
+                    <div class="offers-section-inform-items-block6">
+                        <img src="./assets/images/image5.svg" alt="zippal studio">
+                        <h1 class="offers-section-inform-items-block6-title">Zippal Studio</h1>
+                        <p class="offers-section-inform-items-block6-location">California, USA</p>
+                    </div>
+                    <div class="offers-section-inform-items-block6">
+                        <img src="./assets/images/image6.svg" alt="scooter studio">
+                        <h1 class="offers-section-inform-items-block6-title">Scooter Studio</h1>
+                        <p class="offers-section-inform-items-block6-location">Taxus, USA</p>
+                    </div>
+                    <div class="offers-section-inform-items-block8">
+                        <img src="./assets/images/image7.svg" alt="tomorrower">
+                        <h1 class="offers-section-inform-items-block8-title">Tomorrower</h1>
+                        <p class="offers-section-inform-items-block8-location">California, USA</p>
+                    </div>
+                    <div class="offers-section-inform-items-block8">
+                        <img src="./assets/images/image8.svg" alt="universal studio">
+                        <h1 class="offers-section-inform-items-block8-title">The Tickler</h1>
+                        <p class="offers-section-inform-items-block8-location">San Francisco, USA</p>
+                    </div>
+                </div>
+                <button class="offers-section-inform-more">More Offers</button>
+            </div>
+        </div>
+    </section>
+    <section class="reviews">
+        <h1 class="reviews-title">Reviews</h1>
+        <p class="reviews-text">customer support is our first priority</p>
+        <div class="reviews-block">
+            <div class="reviews-block-item">
+                <img class="reviews-block-item-person" src="./assets/images/profile1.svg" alt="Williamson"> <br>
+                <img class="reviews-block-item-dots" src="./assets/icons/Vector.svg" alt="icons">
+                <p class="reviews-block-item-text">Duis bibendum sagittis, consectetur quam amet at. Cursus lorem dictum
+                    adipiscing auctor cra</p>
+                <h2 class="reviews-block-item-name">Cameron Williamson</h2>
+                <p class="reviews-block-item-prof">Doctor</p>
+            </div>
+            <div class="reviews-block-item">
+                <img class="reviews-block-item-person" src="./assets/images/profile2.svg" alt="Jacob Jones"> <br>
+                <img class="reviews-block-item-dots" src="./assets/icons/Vector.svg" alt="icons">
+                <p class="reviews-block-item-text">Vitae placerat tortor ut congue phasellus. Nunc, turpis sed commodo
+                    elit sollicitudin nisi dolor do</p>
+                <h2 class="reviews-block-item-name">Jacob Jones</h2>
+                <p class="reviews-block-item-prof">Engineer</p>
+            </div>
+            <div class="reviews-block-item">
+                <img class="reviews-block-item-person" src="./assets/images/profile3.svg" alt="Robert"> <br>
+                <img class="reviews-block-item-dots" src="./assets/icons/Vector.svg" alt="icons">
+                <p class="reviews-block-item-text">Habitant sollicitudin nisi, dolor metus aenean dapibus dictumst sed
+                    vel nunc, et cras vivamus</p>
+                <h2 class="reviews-block-item-name">Robert Fox</h2>
+                <p class="reviews-block-item-prof">Busines</p>
+            </div>
+        </div>
+
+    </section>
+    <section class="info">
+        <div class="info-container">
+            <div class="info-container-block">
+                <p class="info-container-block-descrip">We believe</p>
+                <h1 class="info-container-block-title">The best way to find yourself is to lose yourself in the service
+                    of others.</h1>
+                <button class="info-container-block-button">Get a Quote</button>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="touch">
+        <div class="touch-get">
+            <h1 class="touch-get-title">Get in touch</h1>
+            <p class="touch-get-text">we are more interested in your thoughts</p>
+            <form class="touch-get-form">
+                <input class="touch-get-form-name" type="text" placeholder="Your Full Name" required>
+                <input class="touch-get-form-name" type="email" placeholder="Your Email Address" required>
+                <input class="touch-get-form-textarea" type="text" placeholder="Your Message ">
+                <input type="submit" class="touch-get-form-send" value="Send"></input>
+            </form>
+        </div>
+        <div class="touch-contact">
+            <h1 class="touch-contact-title">Contact Us</h1>
+            <div class="touch-contact-block">
+                <img src="./assets/icons/home.svg" alt="home icons">
+                <p class="touch-contact-block-text">1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
+            </div>
+            <div class="touch-contact-block">
+                <img src="./assets/icons/mail.svg" alt="mail icons">
+                <div class="touch-contact-block-text">
+                    <p>willie.jennings@example.com</p>
+                </div>
+            </div>
+            <p  class="touch-contact-add">hellous@example.com</p>
+            <div class="touch-contact-block">
+                <img src="./assets/icons/phone.svg" alt="phone">
+                <div class="touch-contact-block-text">
+                    <p>(704) 555-0127</p>
+                </div>
+            </div>
+            <p class="touch-contact-add">(704) 555-0128</p>
+            <div class="touch-contact-soc">
+               <!-- <img class="touch-contact-soc-link" src="./assets/icons/facebook.svg" alt="facebook icons"> -->
+               <div class="touch-contact-soc-link"><svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06802 2.06802C4.91193 1.22411 6.05653 0.75 7.25 0.75H9.5C9.91421 0.75 10.25 1.08579 10.25 1.5V4.5C10.25 4.91421 9.91421 5.25 9.5 5.25H7.25V6.75H9.5C9.73095 6.75 9.94902 6.8564 10.0912 7.03844C10.2333 7.22048 10.2836 7.45785 10.2276 7.6819L9.47761 10.6819C9.39414 11.0158 9.09415 11.25 8.75 11.25H7.25V16.5C7.25 16.9142 6.91421 17.25 6.5 17.25H3.5C3.08579 17.25 2.75 16.9142 2.75 16.5V11.25H1.25C0.835786 11.25 0.5 10.9142 0.5 10.5V7.5C0.5 7.08579 0.835786 6.75 1.25 6.75H2.75V5.25C2.75 4.05653 3.22411 2.91193 4.06802 2.06802ZM7.25 2.25C6.45435 2.25 5.69129 2.56607 5.12868 3.12868C4.56607 3.69129 4.25 4.45435 4.25 5.25V7.5C4.25 7.91421 3.91421 8.25 3.5 8.25H2V9.75H3.5C3.91421 9.75 4.25 10.0858 4.25 10.5V15.75H5.75V10.5C5.75 10.0858 6.08579 9.75 6.5 9.75H8.16442L8.53942 8.25H6.5C6.08579 8.25 5.75 7.91421 5.75 7.5V5.25C5.75 4.85217 5.90804 4.47064 6.18934 4.18934C6.47064 3.90804 6.85217 3.75 7.25 3.75H8.75V2.25H7.25Z" fill="#333333"/>
+                </svg> </div>
+                <!-- <img src="./assets/icons/linkd.svg" alt="linkedin icons">
+                <img src="./assets/icons/twitter.svg" alt="twitter icons">
+                <img src="./assets/icons/instagram.svg" alt="instagram icons"> -->
+                <div class="touch-contact-soc-link"><svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 6.75C11.0054 6.75 10.0516 7.14509 9.34835 7.84835C8.64509 8.55161 8.25 9.50544 8.25 10.5V15H9.75V10.5C9.75 9.90326 9.98705 9.33097 10.409 8.90901C10.831 8.48705 11.4033 8.25 12 8.25C12.5967 8.25 13.169 8.48705 13.591 8.90901C14.0129 9.33097 14.25 9.90326 14.25 10.5V15H15.75V10.5C15.75 9.50544 15.3549 8.55161 14.6517 7.84835C13.9484 7.14509 12.9946 6.75 12 6.75ZM12 5.25C10.6076 5.25 9.27226 5.80312 8.28769 6.78769C7.30312 7.77226 6.75 9.10761 6.75 10.5V15.75C6.75 16.1642 7.08579 16.5 7.5 16.5H10.5C10.9142 16.5 11.25 16.1642 11.25 15.75V10.5C11.25 10.3011 11.329 10.1103 11.4697 9.96967C11.6103 9.82902 11.8011 9.75 12 9.75C12.1989 9.75 12.3897 9.82902 12.5303 9.96967C12.671 10.1103 12.75 10.3011 12.75 10.5V15.75C12.75 16.1642 13.0858 16.5 13.5 16.5H16.5C16.9142 16.5 17.25 16.1642 17.25 15.75V10.5C17.25 9.10761 16.6969 7.77226 15.7123 6.78769C14.7277 5.80312 13.3924 5.25 12 5.25Z" fill="#333333"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.75 6.75C0.75 6.33579 1.08579 6 1.5 6H4.5C4.91421 6 5.25 6.33579 5.25 6.75V15.75C5.25 16.1642 4.91421 16.5 4.5 16.5H1.5C1.08579 16.5 0.75 16.1642 0.75 15.75V6.75ZM2.25 7.5V15H3.75V7.5H2.25Z" fill="#333333"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 2.25C2.58579 2.25 2.25 2.58579 2.25 3C2.25 3.41421 2.58579 3.75 3 3.75C3.41421 3.75 3.75 3.41421 3.75 3C3.75 2.58579 3.41421 2.25 3 2.25ZM0.75 3C0.75 1.75736 1.75736 0.75 3 0.75C4.24264 0.75 5.25 1.75736 5.25 3C5.25 4.24264 4.24264 5.25 3 5.25C1.75736 5.25 0.75 4.24264 0.75 3Z" fill="#333333"/>
+                    </svg></div>
+                <div class="touch-contact-soc-link"><svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.22502 15.4249C4.27502 15.4249 2.25002 14.8999 0.450021 13.8499C0.150021 13.6999 2.07573e-05 13.3249 0.0750208 13.0249C0.150021 12.7249 0.450021 12.4999 0.750021 12.4999C2.02502 12.5749 3.30002 12.2749 4.42502 11.7499C1.65002 10.0249 0.900021 7.6249 0.825021 5.7499C0.750021 3.5749 1.50002 1.7749 1.57502 1.6999C1.65002 1.4749 1.87502 1.2499 2.17502 1.2499C2.47502 1.2499 2.70002 1.3249 2.85002 1.5499C4.12502 3.3499 6.07502 4.4749 8.25002 4.6249C8.25002 3.4249 8.77502 2.2999 9.67502 1.4749C11.25 0.124902 13.575 0.124902 15.15 1.4749C15.75 1.2499 16.35 0.949902 16.875 0.574902C17.1 0.424902 17.475 0.424902 17.7 0.574902C17.925 0.724902 18.075 1.0999 18 1.3999C17.775 2.4499 17.25 3.4249 16.5 4.2499C16.5 4.3999 16.5 4.4749 16.5 4.6249C16.5 8.7499 14.7 12.1999 11.475 13.9999C9.90002 14.9749 8.10002 15.4249 6.22502 15.4249ZM3.75002 13.6249C6.22502 14.2249 8.70002 13.9249 10.8 12.7249C13.5 11.1499 15.075 8.1499 15.075 4.6249C15.075 4.4749 15.075 4.3249 15 4.1749C14.925 3.9499 15 3.6499 15.225 3.4999C15.375 3.3499 15.525 3.1249 15.675 2.9749C15.525 3.0499 15.3 3.1249 15.15 3.1249C14.85 3.1999 14.55 3.1249 14.4 2.8999C13.425 1.8499 11.775 1.6999 10.725 2.6749C10.05 3.1249 9.75002 3.8749 9.75002 4.6249V5.3749C9.75002 5.7499 9.45002 6.1249 9.00002 6.1249C6.52502 6.1999 4.20002 5.2249 2.55002 3.4999C2.10002 5.4499 1.95002 9.1249 6.30002 10.9999C6.52502 11.1499 6.75002 11.3749 6.75002 11.6749C6.75002 11.9749 6.67502 12.1999 6.45002 12.3499C5.55002 12.9499 4.65002 13.3999 3.75002 13.6249Z" fill="#333333"/>
+                    </svg>
+                    </div>
+                <div class="touch-contact-soc-link"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_20_268)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.25 2.25C3.59315 2.25 2.25 3.59315 2.25 5.25V12.75C2.25 14.4069 3.59315 15.75 5.25 15.75H12.75C14.4069 15.75 15.75 14.4069 15.75 12.75V5.25C15.75 3.59315 14.4069 2.25 12.75 2.25H5.25ZM0.75 5.25C0.75 2.76472 2.76472 0.75 5.25 0.75H12.75C15.2353 0.75 17.25 2.76472 17.25 5.25V12.75C17.25 15.2353 15.2353 17.25 12.75 17.25H5.25C2.76472 17.25 0.75 15.2353 0.75 12.75V5.25Z" fill="#333333"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.36251 6.74211C8.89438 6.6727 8.41627 6.75266 7.99619 6.97063C7.57612 7.18859 7.23547 7.53347 7.0227 7.9562C6.80992 8.37893 6.73586 8.85799 6.81105 9.32523C6.88624 9.79248 7.10684 10.2241 7.44148 10.5588C7.77613 10.8934 8.20777 11.114 8.67502 11.1892C9.14226 11.2644 9.62132 11.1903 10.0441 10.9776C10.4668 10.7648 10.8117 10.4241 11.0296 10.0041C11.2476 9.58399 11.3276 9.10588 11.2581 8.63774C11.1873 8.16022 10.9648 7.71814 10.6235 7.37679C10.2821 7.03544 9.84003 6.81292 9.36251 6.74211ZM7.30534 5.63919C8.00546 5.27591 8.80231 5.14264 9.58254 5.25834C10.3784 5.37636 11.1152 5.74721 11.6841 6.31613C12.253 6.88504 12.6239 7.62185 12.7419 8.41771C12.8576 9.19795 12.7243 9.99479 12.3611 10.6949C11.9978 11.395 11.423 11.9628 10.7184 12.3174C10.0139 12.672 9.21546 12.7955 8.43671 12.6702C7.65797 12.5448 6.93856 12.1772 6.38082 11.6194C5.82309 11.0617 5.45541 10.3423 5.3301 9.56354C5.20479 8.78479 5.32822 7.98636 5.68284 7.28181C6.03746 6.57726 6.60521 6.00247 7.30534 5.63919Z" fill="#333333"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_20_268">
+                    <rect width="18" height="18" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg></div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-link">
+            <div class="footer-link-info">
+                <div class="footer-link-info-logo"><img src="./assets/icons/Logo.svg"></div>
+                <p class="footer-link-info-text">Lorem ipsum dolor sit amet, sectetur <br> adipiscing elit, sed do eiusmod teor <br> incididunt ut labore et dolore ma <br> aliquam ad minim veniam quis.</p>
+                <div class="footer-link-info-soc">
+                    <!-- <img src="./assets/icons/facebook-pink.svg" alt="facebook icons">
+                    <img src="./assets/icons/linkd-pink.svg" alt="linkedin icons">
+                    <img src="./assets/icons/twitter-pink.svg" alt="twitter pink">
+                    <img src="./assets/icons/instagram-pink.svg" alt="instagram icons"> -->
+                    <div class="footer-link-info-soc-icon"><svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.17157 1.83808C3.92172 1.08793 4.93913 0.666504 6 0.666504H8C8.36819 0.666504 8.66667 0.964981 8.66667 1.33317V3.99984C8.66667 4.36803 8.36819 4.6665 8 4.6665H6V5.99984H8C8.20529 5.99984 8.39913 6.09442 8.52547 6.25623C8.65181 6.41804 8.69655 6.62903 8.64676 6.82819L7.98009 9.49486C7.9059 9.79164 7.63925 9.99984 7.33333 9.99984H6V14.6665C6 15.0347 5.70152 15.3332 5.33333 15.3332H2.66667C2.29848 15.3332 2 15.0347 2 14.6665V9.99984H0.666667C0.298477 9.99984 0 9.70136 0 9.33317V6.6665C0 6.29831 0.298477 5.99984 0.666667 5.99984H2V4.6665C2 3.60564 2.42143 2.58822 3.17157 1.83808ZM6 1.99984C5.29276 1.99984 4.61448 2.28079 4.11438 2.78089C3.61428 3.28098 3.33333 3.95926 3.33333 4.6665V6.6665C3.33333 7.03469 3.03486 7.33317 2.66667 7.33317H1.33333V8.6665H2.66667C3.03486 8.6665 3.33333 8.96498 3.33333 9.33317V13.9998H4.66667V9.33317C4.66667 8.96498 4.96514 8.6665 5.33333 8.6665H6.81282L7.14615 7.33317H5.33333C4.96514 7.33317 4.66667 7.03469 4.66667 6.6665V4.6665C4.66667 4.31288 4.80714 3.97374 5.05719 3.7237C5.30724 3.47365 5.64638 3.33317 6 3.33317H7.33333V1.99984H6Z" fill="#B83B5E"/>
+                        </svg>
+                        </div>
+                        <div class="footer-link-info-soc-icon"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6666 5.99984C9.78257 5.99984 8.93472 6.35103 8.3096 6.97615C7.68448 7.60127 7.33329 8.44912 7.33329 9.33317V13.3332H8.66663V9.33317C8.66663 8.80274 8.87734 8.29403 9.25241 7.91896C9.62748 7.54389 10.1362 7.33317 10.6666 7.33317C11.1971 7.33317 11.7058 7.54389 12.0808 7.91896C12.4559 8.29403 12.6666 8.80274 12.6666 9.33317V13.3332H14V9.33317C14 8.44912 13.6488 7.60127 13.0236 6.97615C12.3985 6.35103 11.5507 5.99984 10.6666 5.99984ZM10.6666 4.6665C9.42895 4.6665 8.24196 5.15817 7.36679 6.03334C6.49162 6.90851 5.99996 8.09549 5.99996 9.33317V13.9998C5.99996 14.368 6.29844 14.6665 6.66663 14.6665H9.33329C9.70148 14.6665 9.99996 14.368 9.99996 13.9998V9.33317C9.99996 9.15636 10.0702 8.98679 10.1952 8.86177C10.3202 8.73674 10.4898 8.6665 10.6666 8.6665C10.8434 8.6665 11.013 8.73674 11.138 8.86177C11.2631 8.98679 11.3333 9.15636 11.3333 9.33317V13.9998C11.3333 14.368 11.6318 14.6665 12 14.6665H14.6666C15.0348 14.6665 15.3333 14.368 15.3333 13.9998V9.33317C15.3333 8.09549 14.8416 6.90851 13.9665 6.03334C13.0913 5.15817 11.9043 4.6665 10.6666 4.6665Z" fill="#B83B5E"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666626 5.99984C0.666626 5.63165 0.965103 5.33317 1.33329 5.33317H3.99996C4.36815 5.33317 4.66663 5.63165 4.66663 5.99984V13.9998C4.66663 14.368 4.36815 14.6665 3.99996 14.6665H1.33329C0.965103 14.6665 0.666626 14.368 0.666626 13.9998V5.99984ZM1.99996 6.6665V13.3332H3.33329V6.6665H1.99996Z" fill="#B83B5E"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66663 1.99984C2.29844 1.99984 1.99996 2.29831 1.99996 2.6665C1.99996 3.03469 2.29844 3.33317 2.66663 3.33317C3.03482 3.33317 3.33329 3.03469 3.33329 2.6665C3.33329 2.29831 3.03482 1.99984 2.66663 1.99984ZM0.666626 2.6665C0.666626 1.56193 1.56206 0.666504 2.66663 0.666504C3.7712 0.666504 4.66663 1.56193 4.66663 2.6665C4.66663 3.77107 3.7712 4.6665 2.66663 4.6665C1.56206 4.6665 0.666626 3.77107 0.666626 2.6665Z" fill="#B83B5E"/>
+                            </svg></div>
+                        <div class="footer-link-info-soc-icon"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.53334 13.5998C3.8 13.5998 2 13.1331 0.400005 12.1998C0.133338 12.0665 4.88386e-06 11.7331 0.0666715 11.4665C0.133338 11.1998 0.400005 10.9998 0.666672 10.9998C1.8 11.0665 2.93334 10.7998 3.93334 10.3331C1.46667 8.7998 0.800005 6.66647 0.733338 4.9998C0.666672 3.06647 1.33334 1.46647 1.4 1.3998C1.46667 1.1998 1.66667 0.999805 1.93334 0.999805C2.2 0.999805 2.4 1.06647 2.53334 1.26647C3.66667 2.86647 5.4 3.86647 7.33334 3.9998C7.33334 2.93314 7.8 1.93314 8.6 1.1998C10 -0.000195235 12.0667 -0.000195235 13.4667 1.1998C14 0.999805 14.5333 0.733138 15 0.399805C15.2 0.266471 15.5333 0.266471 15.7333 0.399805C15.9333 0.533138 16.0667 0.866471 16 1.13314C15.8 2.06647 15.3333 2.93314 14.6667 3.66647C14.6667 3.7998 14.6667 3.86647 14.6667 3.9998C14.6667 7.66647 13.0667 10.7331 10.2 12.3331C8.8 13.1998 7.2 13.5998 5.53334 13.5998ZM3.33334 11.9998C5.53334 12.5331 7.73334 12.2665 9.6 11.1998C12 9.7998 13.4 7.13314 13.4 3.9998C13.4 3.86647 13.4 3.73314 13.3333 3.5998C13.2667 3.3998 13.3333 3.13314 13.5333 2.9998C13.6667 2.86647 13.8 2.66647 13.9333 2.53314C13.8 2.5998 13.6 2.66647 13.4667 2.66647C13.2 2.73314 12.9333 2.66647 12.8 2.46647C11.9333 1.53314 10.4667 1.3998 9.53334 2.26647C8.93334 2.66647 8.66667 3.33314 8.66667 3.9998V4.66647C8.66667 4.9998 8.4 5.33314 8 5.33314C5.8 5.3998 3.73334 4.53314 2.26667 2.9998C1.86667 4.73314 1.73334 7.9998 5.6 9.66647C5.8 9.7998 6 9.9998 6 10.2665C6 10.5331 5.93334 10.7331 5.73334 10.8665C4.93334 11.3998 4.13334 11.7998 3.33334 11.9998Z" fill="#B83B5E"/>
+                            </svg></div>
+                        <div class="footer-link-info-soc-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_20_72)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 1.99984C3.19387 1.99984 1.99996 3.19374 1.99996 4.6665V11.3332C1.99996 12.8059 3.19387 13.9998 4.66663 13.9998H11.3333C12.8061 13.9998 14 12.8059 14 11.3332V4.6665C14 3.19374 12.8061 1.99984 11.3333 1.99984H4.66663ZM0.666626 4.6665C0.666626 2.45736 2.45749 0.666504 4.66663 0.666504H11.3333C13.5424 0.666504 15.3333 2.45736 15.3333 4.6665V11.3332C15.3333 13.5423 13.5424 15.3332 11.3333 15.3332H4.66663C2.45749 15.3332 0.666626 13.5423 0.666626 11.3332V4.6665Z" fill="#B83B5E"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.32226 5.99267C7.90614 5.93096 7.48115 6.00204 7.10775 6.19579C6.73435 6.38954 6.43155 6.69609 6.24242 7.07185C6.05329 7.44761 5.98746 7.87344 6.05429 8.28877C6.12113 8.7041 6.31722 9.08778 6.61468 9.38525C6.91214 9.68271 7.29582 9.8788 7.71115 9.94563C8.12648 10.0125 8.55231 9.94663 8.92807 9.7575C9.30383 9.56837 9.61039 9.26557 9.80414 8.89217C9.99789 8.51877 10.069 8.09379 10.0073 7.67767C9.94432 7.2532 9.74653 6.86024 9.44311 6.55682C9.13969 6.2534 8.74672 6.05561 8.32226 5.99267ZM6.49366 5.01229C7.11599 4.68937 7.8243 4.57091 8.51784 4.67375C9.22527 4.77866 9.88021 5.10831 10.3859 5.61401C10.8916 6.11971 11.2213 6.77465 11.3262 7.48209C11.429 8.17563 11.3106 8.88393 10.9876 9.50627C10.6647 10.1286 10.1538 10.6333 9.52753 10.9485C8.90126 11.2637 8.19155 11.3734 7.49933 11.262C6.80711 11.1506 6.16764 10.8238 5.67187 10.3281C5.1761 9.83229 4.84928 9.19282 4.73789 8.5006C4.62651 7.80838 4.73623 7.09867 5.05144 6.4724C5.36666 5.84613 5.87133 5.3352 6.49366 5.01229Z" fill="#B83B5E"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_20_72">
+                            <rect width="16" height="16" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg></div>
+                </div>
+            </div>
+            <div class="footer-link-about">
+                <h2 class="footer-link-about-title">Quick Links</h2>
+                <p class="footer-link-about-serv"><a class="footer-link-about-serv-source">About</a></p>
+                <p class="footer-link-about-serv"><a class="footer-link-about-serv-source">Services</a></p>
+                <p class="footer-link-about-serv"><a class="footer-link-about-serv-source">Offers</a></p>
+                <p class="footer-link-about-serv"><a class="footer-link-about-serv-source">Contact</a></p>
+            </div>
+            <div class="footer-link-about">
+                <h2 class="footer-link-about-title">Services</h2>
+                <p class="footer-link-about-serv"><a class="footer-link-about-serv-source">Cars</a></p>
+                <p class="footer-link-about-serv"><a class="footer-link-about-serv-source">Roadside</a></p>
+                <p class="footer-link-about-serv"><a class="footer-link-about-serv-source">Banking</a></p>
+                <p class="footer-link-about-serv"><a class="footer-link-about-serv-source">Insurance</a></p>
+                <p class="footer-link-about-serv"><a class="footer-link-about-serv-source">Travel</a></p>
+            </div>
+            <div class="footer-link-about">
+                <h2 class="footer-link-about-title">Membership</h2>
+                <p class="footer-link-about-serv"><a class="footer-link-about-serv-source">Benifits</a></p>
+                <p class="footer-link-about-serv"><a class="footer-link-about-serv-source">Manage Plan</a></p>
+                <p class="footer-link-about-serv"><a class="footer-link-about-serv-source">Payments</a></p>
+                <p class="footer-link-about-serv"><a class="footer-link-about-serv-source">Corporate Plan</a></p>
+            </div>
+            <div class="footer-link-about">
+                <h2 class="footer-link-about-title">Support</h2>
+                <p class="footer-link-about-serv"><a class="footer-link-about-serv-source">Live Support</a></p>
+                <p class="footer-link-about-serv"><a class="footer-link-about-serv-source">Contact Us</a></p>
+                <p class="footer-link-about-serv"><a class="footer-link-about-serv-source">Company</a></p>
+            </div>
+        </div>
+        <div class="footer-add">
+            <p>© 2020 — 2022</p>
+            <p>Privacy — Terms</p>
+        </div>
+
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

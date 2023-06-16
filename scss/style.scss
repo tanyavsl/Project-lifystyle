@@ -1,0 +1,1230 @@
+@import "./mixin";
+@import "./reset";
+@import "./responsive";
+@import "./variebles";
+@import "./hamburger";
+
+
+a {
+    text-decoration: none;
+    @include fontsMulish(400, 16, $color-white, 20px);
+    transition: font-size 0.3s ease;
+}
+
+a:hover {
+    font-size: 20px;
+    color: $color-pink;
+}
+
+.button-more:hover {
+    color: $color-white;
+    text-decoration: underline;
+    font-size: 17px;
+}
+
+.hamburger {
+    display: none;
+
+    @include cwd (1020px) {
+        display: inline-block;
+    }
+
+    @include cwd (460px) {
+        margin-right: 20px;
+    }
+
+}
+
+
+.heading {
+    background-image: url(/assets/images/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-position: center;
+
+    &-container {
+        background: linear-gradient(180deg, rgba(184, 59, 94, 0.4) 0%, rgba(184, 59, 94, 0.2) 100%);
+
+        &-section {
+            display: flex;
+            max-width: 1440px;
+            margin: 0 auto;
+            justify-content: space-between;
+            padding: 0px 70px;
+            position: relative;
+
+            @include cwd (662px) {
+                padding-left: 50px;
+            }
+
+            &-logo {
+                @include fontsMulish(700, 24, $color-pink, 30px);
+                margin-top: 37px;
+            }
+
+            &-nav {
+
+                &-list {
+                    display: flex;
+                    gap: 66px;
+                    @include fontsMulish(400, 16, $color-white, 20px);
+                    margin-top: 43px;
+
+                    @include cwd (1020px) {
+                        position: absolute;
+                        left: 0;
+                        top: 70%;
+                        flex-direction: column;
+                        width: 100%;
+                        align-items: center;
+                        gap: 50px;
+                        -webkit-box-shadow: 0px 31px 31px 14px rgba(184, 59, 94, 0.75);
+                        -moz-box-shadow: 0px 31px 31px 14px rgba(184, 59, 94, 0.75);
+                        box-shadow: 0px 31px 31px 14px rgba(184, 59, 94, 0.75);
+                        background-color: $color-pink;
+                        padding-top: 30px;
+                        padding-bottom: 30px;
+                        display: none;
+
+                        a:hover {
+                            color: $color-white;
+                            text-decoration: underline;
+                        }
+
+
+                        &.is-active {
+                            display: flex;
+
+                        }
+                    }
+
+                    &-item {}
+                }
+            }
+
+            &-login {
+                display: flex;
+                gap: 24px;
+
+                @include cwd (460px) {
+                    display: none;
+                }
+
+                &-regist {
+                    @include fontsMulish(400, 16, $color-white, 20px);
+                    margin-top: 43px;
+                }
+
+                &-sign {
+                    @include fontsMulish(600, 16, $color-white, 20px);
+                    background-color: $color-pink;
+                    border: none;
+                    width: 112px;
+                    height: 48px;
+                    border-radius: 4px;
+                    margin-top: 28px;
+
+                    &:hover {
+                        background-color: $color-white;
+                        color: $color-pink;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        &-descript {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding-left: 165px;
+            margin-top: 146px;
+
+            @include cwd (947px) {
+                padding-left: 100px;
+                margin-top: 100px;
+            }
+
+            @include cwd (827px) {
+                padding-left: 50px;
+                margin-top: 100px;
+            }
+
+            @include cwd (595px) {
+                padding-left: 30px;
+                margin-top: 100px;
+            }
+
+            @include cwd (528px) {
+                padding-left: 20px;
+                margin-top: 100px;
+            }
+
+            &-title {
+                @include fontsMulish(800, 64px, $color-white, 80px);
+
+                @include cwd (736px) {
+                    font-size: 54px;
+                }
+
+                @include cwd (568px) {
+                    font-size: 50px;
+                    line-height: 70px;
+                }
+
+                @include cwd (511px) {
+                    font-size: 40px;
+                    line-height: 60px;
+                }
+
+                @include cwd (413px) {
+                    font-size: 38px;
+                    line-height: 58px;
+                }
+
+                @include cwd (393px) {
+                    font-size: 34px;
+                    line-height: 53px;
+                }
+            }
+
+            &-text {
+                @include fontsMulish(600, 18px, $color-white, 140%);
+                margin-top: 24px;
+                margin-bottom: 44px;
+
+                @include cwd (736px) {
+                    font-size: 15px;
+                }
+
+                @include cwd (511px) {
+                    font-size: 13px;
+                    margin-top: 20px;
+                }
+
+                @include cwd (397px) {
+                    margin-right: 10px;
+                }
+
+                @include cwd (393px) {
+                    font-size: 11px;
+                    margin-top: 20px;
+                }
+
+            }
+
+            &-click {
+                display: flex;
+                gap: 30px;
+                padding-bottom: 140px;
+
+                &-get {
+                    @include fontsMulish(600, 16px, $color-white, 20px);
+                    border: none;
+                    background-color: $color-pink;
+                    border-radius: 4px;
+                    width: 160px;
+                    height: 50px;
+
+                    &:hover {
+                        background-color: $color-white;
+                        color: $color-pink;
+                        cursor: pointer;
+                    }
+                }
+
+                &-regist {
+                    @include fontsMulish(600, 16px, $color-pink, 20px);
+                    border: 0.5px solid $color-pink;
+                    background-color: transparent;
+                    border-radius: 4px;
+                    width: 160px;
+                    height: 50px;
+
+                    @include cwd (393px) {
+                        margin-right: 20px;
+                    }
+
+                    &:hover {
+                        border: 0.5px solid $color-white;
+                        color: $color-white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.regist {
+    display: none;
+    width: 100%;
+    background-image: url("/assets/images/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &-bg {
+        backdrop-filter: blur(10px);
+
+        &-icon {
+            width: 40px;
+            position: absolute;
+            right: 50px;
+            top: 30px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        &-block {
+
+            max-height: 800px;
+            padding-top: 155px;
+            padding-bottom: 127px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include cwd (947px) {
+                height: 750px;
+            }
+
+            @include cwd (568px) {
+                height: 707px;
+            }
+
+            @include cwd (511px) {
+                height: 665px;
+            }
+
+            @include cwd (393px) {
+                height: 629px;
+            }
+
+            &-form {
+                background-color: $color-white;
+                width: 510px;
+                height: 518px;
+                display: flex;
+                flex-direction: column;
+                border-radius: 45px;
+                align-items: center;
+                padding-top: 80px;
+
+                @include cwd (530px) {
+                    width: 440px;
+
+                }
+
+                @include cwd (460px) {
+                    margin: 20px;
+                }
+
+                @include cwd (393px) {
+                    margin-top: 30px;
+                    padding-top: 50px;
+                    height: 448px;
+                }
+
+                &-title {
+                    @include fontsMulish(600, 40px, $color-pink, 20px);
+                    margin-bottom: 37px;
+                }
+
+                &-item {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    &-name {
+                        width: 334px;
+                        height: 60px;
+                        border-radius: 30px;
+                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        ;
+                        background-color: #f5f5f5;
+                        padding-left: 20px;
+
+                        @include cwd (418px) {
+
+                            width: 304px;
+                        }
+
+                        @include cwd (390px) {
+
+                            width: 290px;
+                        }
+
+                        @include cwd (370px) {
+
+                            width: 280px;
+                        }
+
+                        // &:invalid:focus {
+                        //     border: 2px solid red;
+                        //   }
+                    }
+
+                    &-send {
+                        width: 160px;
+                        height: 50px;
+                        @include fontsMulish(600, 16px, $color-white, 20px);
+                        background-color: $color-pink;
+                        border-radius: 4px;
+                        border: none;
+
+                        &:hover {
+                            background-color: $color-white;
+                            color: $color-pink;
+                            cursor: pointer;
+                            border: solid 1px $color-pink;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about {
+    background-color: $color-pink;
+
+    &-container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 165px;
+        padding-top: 100px;
+        display: flex;
+        gap: 340px;
+
+        @include cwd (1265px) {
+            gap: 150px;
+        }
+
+        @include cwd (1075px) {
+            padding: 0 100px;
+            padding-top: 100px;
+        }
+
+        @include cwd (945px) {
+            padding: 0 80px;
+            padding-top: 100px;
+            gap: 100px;
+        }
+
+        @include cwd (855px) {
+            padding: 0 50px;
+            padding-top: 100px;
+            gap: 70px;
+        }
+
+        @include cwd (765px) {
+            flex-direction: column;
+            text-align: center;
+            padding-top: 80px;
+            gap: 40px;
+        }
+
+        &-title {
+            @include fontsMulish(800, 45px, $color-white, 56px);
+        }
+
+        &-descript {
+            @include fontsMulish(400, 18px, $color-white, 25px);
+
+            &-button {
+                background-color: transparent;
+                border: none;
+                @include fontsMulish(400, 18px, $color-white, 25px);
+                margin-bottom: 83px;
+                margin-top: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.additional-info {
+    // display: none;
+    overflow: hidden;
+    margin-top: -60px;
+    margin-bottom: 30px;
+    max-height: 0;
+    transition: max-height 2s ease;
+  }
+  .expand {
+    display: block;
+    max-height: 200px; 
+  }
+
+
+.services {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    &-title {
+        @include fontsMulish(800, 45px, $color-black, 56px);
+        text-align: center;
+        padding-top: 90px;
+    }
+
+    &-text {
+        @include fontsMulish(400, 18px, $color-dark-grey, 23px);
+        text-align: center;
+        margin-top: 12px;
+        margin-bottom: 80px;
+    }
+
+    &-slider {
+        width: 100%;
+        transition: transform 0.5s ease;
+
+        &-item {
+            position: relative;
+            max-width: 100%;
+            min-width: 0;
+            display: flex;
+            justify-content: center;
+
+            &-img {
+                min-width: 0;
+            }
+
+            &-text {
+                background-color: $color-white;
+                @include fontsMulish(600, 18px, $color-black, 140%);
+                width: 160px;
+                text-align: center;
+                padding-top: 18px;
+                padding-bottom: 17px;
+                border-radius: 0px 8px;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+
+
+}
+
+
+
+//Slider
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex;
+}
+
+
+
+.offers {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 84px;
+
+    &-title {
+        @include fontsMulish(800, 45px, $color-black, 56px);
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    &-text {
+        @include fontsMulish(400, 18px, $color-dark-grey, 23px);
+        text-align: center;
+        margin-top: 12px;
+        margin-bottom: 84px;
+    }
+
+    &-section {
+        display: flex;
+
+        @include cwd (786px) {
+            flex-direction: column;
+        }
+
+        &-slider {
+            position: relative;
+            min-width: 0;
+            max-width: 515px;
+
+            @include cwd (786px) {
+                margin: 0 auto;
+            }
+
+            @include cwd (516px) {
+                display: none;
+
+            }
+
+            & .slick-arrow {
+                position: absolute;
+                bottom: 64px;
+                z-index: 10;
+                font-size: 0;
+            }
+
+            & .slick-arrow.slick-prev {
+                left: 20%;
+                width: 30px;
+                height: 30px;
+                border: none;
+                background: url('/assets/icons/left.svg') 0 0 no-repeat;
+            }
+
+            & .slick-arrow.slick-next {
+                right: 20%;
+                border: none;
+                width: 30px;
+                height: 30px;
+                background: url('/assets/icons/right.svg') 0 0 no-repeat;
+            }
+
+            & .slick-dots {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 17px;
+                bottom: 49px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            & .slick-dots button {
+                width: 30px;
+                height: 30px;
+                border: none;
+                background-color: $color-white;
+                border-radius: 50%;
+            }
+
+            & .slick-dots li.slick-active button {
+                background-color: $color-pink;
+                color: $color-white;
+            }
+        }
+
+        &-inform {
+            background-color: #FAFAFA;
+            padding-left: 30px;
+            padding-top: 72px;
+            padding-right: 165px;
+
+            @include cwd (1439px) {
+                padding-right: 60px;
+            }
+
+            @include cwd (1334px) {
+                padding-right: 30px;
+            }
+
+            @include cwd (786px) {
+                display: inline-block;
+                text-align: center;
+            }
+
+            &-title {
+                @include fontsMulish(800, 36px, $color-pink, 45px);
+
+            }
+
+            &-descrip {
+                @include fontsMulish(400, 18px, $color-black, 23px);
+                margin-top: 23px;
+                margin-bottom: 40px;
+
+            }
+
+            &-items {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+
+                @include cwd (786px) {
+                    justify-content: center;
+                }
+
+                &-block {
+                    &-title {
+                        @include fontsMulish(700, 14px, $color-black, 18px);
+                        text-align: center;
+                        margin-top: 13px;
+                    }
+
+                    &-location {
+                        @include fontsMulish(400, 12px, $color-black, 15px);
+                        text-align: center;
+                    }
+                }
+
+                &-block4 {
+                    @include cwd (924px) {
+                        display: none;
+                    }
+
+                    @include cwd (786px) {
+                        display: block;
+                    }
+
+                    &-title {
+                        @include fontsMulish(700, 14px, $color-black, 18px);
+                        text-align: center;
+                        margin-top: 13px;
+                    }
+
+                    &-location {
+                        @include fontsMulish(400, 12px, $color-black, 15px);
+                        text-align: center;
+                    }
+                }
+
+                &-block6 {
+                    @include cwd (1114px) {
+                        display: none;
+                    }
+
+                    @include cwd (786px) {
+                        display: block;
+                    }
+
+                    @include cwd (409px) {
+                        display: none;
+                    }
+
+                    &-title {
+                        @include fontsMulish(700, 14px, $color-black, 18px);
+                        text-align: center;
+                        margin-top: 13px;
+                    }
+
+                    &-location {
+                        @include fontsMulish(400, 12px, $color-black, 15px);
+                        text-align: center;
+                    }
+                }
+
+                &-block8 {
+                    @include cwd (1304px) {
+                        display: none;
+                    }
+
+                    &-title {
+                        @include fontsMulish(700, 14px, $color-black, 18px);
+                        text-align: center;
+                        margin-top: 13px;
+                    }
+
+                    &-location {
+                        @include fontsMulish(400, 12px, $color-black, 15px);
+                        text-align: center;
+                    }
+                }
+            }
+
+            &-more {
+                margin-top: 35px;
+                width: 160px;
+                height: 50px;
+                border: 1px solid $color-pink;
+                border-radius: 4px;
+                background-color: transparent;
+                @include fontsMulish(600, 16px, $color-pink, 20px);
+
+                @include cwd (786px) {
+                    margin-bottom: 20px;
+                }
+
+                &:hover {
+                    background-color: $color-pink;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+
+
+
+.reviews {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 90px;
+
+    &-title {
+        @include fontsMulish(800, 45px, $color-black, 56px);
+        text-align: center;
+    }
+
+    &-text {
+        @include fontsMulish(400, 18px, $color-black, 23px);
+        margin-top: 12px;
+        text-align: center;
+    }
+
+    &-block {
+        display: flex;
+        gap: 29px;
+        margin-top: 140px;
+        justify-content: center;
+        padding: 0 25px;
+        padding-bottom: 80px;
+
+        @include cwd (758px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 90px;
+        }
+
+        &-item {
+            max-width: 352px;
+            background: #FAFAFA;
+            border-radius: 8px;
+            position: relative;
+
+            &-person {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &-dots {
+                padding-top: 111px;
+                display: flex;
+                margin: 0 auto;
+            }
+
+            &-text {
+                @include fontsMulish(400, 14px, $color-black, 18px);
+                text-align: center;
+                padding: 0 27px;
+                margin-top: 35px;
+                margin-bottom: 16px;
+            }
+
+            &-name {
+                @include fontsMulish(700, 18px, $color-black, 23px);
+                text-align: center;
+            }
+
+            &-prof {
+                @include fontsMulish(400, 14px, $color-black, 18px);
+                text-align: center;
+                margin-top: 4px;
+                padding-bottom: 69px;
+            }
+        }
+    }
+}
+
+.info {
+    background-image: url(/assets/images/bg-info.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &-container {
+        background: rgba(184, 59, 94, 0.8);
+
+        &-block {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 167px;
+            padding-top: 113px;
+
+            @include cwd (899px) {
+                padding: 0 107px;
+                padding-top: 93px;
+            }
+
+            @include cwd (779px) {
+                padding: 0 77px;
+                padding-top: 93px;
+            }
+
+            @include cwd (779px) {
+                padding: 0 57px;
+                padding-top: 93px;
+            }
+
+            @include cwd (616px) {
+                padding: 0 37px;
+                padding-top: 93px;
+            }
+
+            @include cwd (526px) {
+                padding: 0 27px;
+                padding-top: 93px;
+            }
+
+            @include cwd (506px) {
+                padding: 0 77px;
+                padding-top: 93px;
+            }
+
+            @include cwd (481px) {
+                padding: 0 62px;
+                padding-top: 93px;
+            }
+
+            @include cwd (451px) {
+                padding: 0 47px;
+                padding-top: 93px;
+            }
+
+            @include cwd (421px) {
+                padding: 0 32px;
+                padding-top: 53px;
+            }
+
+            @include cwd (364px) {
+                padding: 0 22px;
+                padding-top: 53px;
+            }
+
+            &-descrip {
+                @include fontsMulish(400, 18px, $color-white, 23px);
+
+                @include cwd (576px) {
+                    font-size: 15px;
+                }
+            }
+
+            &-title {
+                @include fontsMulish(800, 45px, $color-white, 56px);
+                margin-top: 11px;
+                margin-bottom: 24px;
+
+                @include cwd (679px) {
+                    font-size: 42px;
+                }
+
+                @include cwd (643px) {
+                    font-size: 40px;
+                }
+
+                @include cwd (576px) {
+                    font-size: 39px;
+                }
+
+                @include cwd (564px) {
+                    font-size: 36px;
+                    line-height: 45px;
+                }
+
+                @include cwd (391px) {
+                    font-size: 33px;
+                    line-height: 43px;
+                }
+            }
+
+            &-button {
+                @include fontsMulish(600, 16px, $color-white, 20px);
+                background-color: transparent;
+                width: 160px;
+                height: 50px;
+                border: 1px solid $color-white;
+                border-radius: 4px;
+                margin-bottom: 118px;
+                cursor: pointer;
+
+                @include cwd (421px) {
+                    margin-bottom: 53px;
+                }
+
+                &:hover {
+                    background-color: $color-white;
+                    color: $color-pink;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+.touch {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    @include cwd (1120px) {
+        flex-direction: column;
+    }
+
+    &-get {
+
+        @include cwd (1120px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @include cwd (380px) {
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        &-title {
+            @include fontsMulish(800, 45px, $color-black, 56px);
+            margin-top: 105px;
+            margin-bottom: 12px;
+
+            @include cwd (380px) {
+                margin-top: 60px;
+                font-size: 44px;
+            }
+        }
+
+        &-text {
+            @include fontsMulish(400, 18px, $color-black, 23px);
+            margin-bottom: 58px;
+
+            @include cwd (380px) {
+                font-size: 16px;
+                margin-bottom: 38px;
+            }
+        }
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+            margin-bottom: 85px;
+
+            &-name {
+                @include fontsMulish(600, 12px, #828282, 15px);
+                width: 445px;
+                height: 56px;
+                background: #FAFAFA;
+                border-radius: 4px;
+                border: none;
+                padding-left: 29px;
+
+                @include cwd (475px) {
+                    max-width: 405px;
+                }
+
+                @include cwd (432px) {
+                    max-width: 360px;
+                }
+
+                @include cwd (380px) {
+                    max-width: 305px;
+                }
+            }
+
+            &-textarea {
+                @include fontsMulish(600, 12px, #828282, 15px);
+                background: #FAFAFA;
+                border-radius: 4px;
+                border: none;
+                padding-left: 29px;
+                padding-bottom: 121px;
+                padding-top: 20px;
+            }
+
+            &-send {
+                width: 160px;
+                height: 50px;
+                @include fontsMulish(600, 16px, $color-white, 20px);
+                background-color: $color-pink;
+                border-radius: 4px;
+                border: none;
+
+                &:hover {
+                    background-color: $color-white;
+                    color: $color-pink;
+                    cursor: pointer;
+                    border: solid 1px $color-pink;
+                }
+            }
+        }
+    }
+
+    &-contact {
+        background: #FAFAFA;
+        border-radius: 8px;
+        margin-top: 100px;
+        margin-bottom: 84px;
+        margin-left: 125px;
+        padding: 0 95px;
+        padding-top: 85px;
+        padding-bottom: 111px;
+        display: flex;
+        flex-direction: column;
+
+        @include cwd (1275px) {
+            margin-left: 80px;
+        }
+
+        @include cwd (1100px) {
+            margin-left: 50px;
+        }
+
+        @include cwd (1120px) {
+            margin: 0 auto;
+        }
+
+        @include cwd (658px) {
+            padding: 40px;
+        }
+
+        &-title {
+            @include fontsMulish(700, 24px, $color-black, 30px);
+        }
+
+        &-block {
+            display: flex;
+            gap: 25px;
+            margin-top: 38px;
+
+            &-text {
+                @include fontsMulish(400, 15px, $color-black, 19px);
+            }
+        }
+
+        &-add {
+            @include fontsMulish(400, 15px, $color-black, 19px);
+            margin-left: 43px;
+        }
+
+        &-soc {
+            display: flex;
+            gap: 24px;
+            margin-top: 49px;
+
+            &-link {
+
+                &:hover {
+                    cursor: pointer;
+
+                    path {
+                        fill: $color-pink;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+
+.footer {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 165px;
+    margin-bottom: 31px;
+
+    @include cwd (1282px) {
+        padding: 0 50px;
+    }
+
+    &-link {
+        display: flex;
+        gap: 125px;
+        margin-top: 83px;
+        margin-bottom: 68px;
+        justify-content: center;
+
+        @include cwd (1382px) {
+            gap: 110px;
+        }
+
+        @include cwd (1322px) {
+            gap: 100px;
+        }
+
+        @include cwd (1052px) {
+            gap: 70px;
+        }
+
+        @include cwd (932px) {
+            gap: 50px;
+        }
+
+
+        &-info {
+            @include cwd (852px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &-logo {
+                @include fontsMulish(700, 24px, $color-pink, 30px);
+            }
+
+            &-text {
+                @include fontsMulish(400, 14px, $color-black, 160%);
+                margin-top: 24px;
+                margin-bottom: 39px;
+
+                @include cwd (852px) {
+                    text-align: center;
+                }
+            }
+
+            &-soc {
+                display: flex;
+                gap: 19px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &-icon:hover {
+                    path {
+                        fill: $color-black;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        &-about {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+
+            @include cwd (852px) {
+                display: none;
+            }
+
+            &-title {
+                @include fontsMulish(700, 14px, $color-black, 21px);
+                margin-bottom: 13px;
+            }
+
+            &-serv {
+                @include fontsMulish(400, 14px, $color-black, 21px);
+
+                &-source {
+                    text-decoration: none;
+                    @include fontsMulish(400, 14px, $color-black, 21px);
+                    transition: font-size 0.3s ease;
+
+                    &:hover {
+                        font-size: 14px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    &-add {
+        display: flex;
+        gap: 21px;
+        justify-content: center;
+        @include fontsMulish(400, 12px, $color-black, 150%);
+    }
+}

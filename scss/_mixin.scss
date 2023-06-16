@@ -1,0 +1,11 @@
+@use "./variebles";
+
+@mixin fontsMulish($weight, $size, $color, $height) {
+    font-family: $font-Mulish;
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+    line-height: $height;
+}
+
