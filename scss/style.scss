@@ -37,7 +37,7 @@ a:hover {
 
 
 .heading {
-    background-image: url(/assets/images/background.svg);
+    background-image: url(./assets/images/background.svg);
     background-repeat: no-repeat;
     background-size: cover;
     // background-position: center;
@@ -258,7 +258,7 @@ a:hover {
 .regist {
     display: none;
     width: 100%;
-    background-image: url("/assets/images/background.svg");
+    background-image: url("./assets/images/background.svg");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
@@ -822,7 +822,7 @@ a:hover {
 }
 
 .info {
-    background-image: url(/assets/images/bg-info.svg);
+    background-image: url(./assets/images/bg-info.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
